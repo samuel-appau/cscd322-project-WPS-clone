@@ -96,12 +96,14 @@ export default function HomeScreen() {
         padding:20,
         borderRadius:10,
         marginLeft:9.5}}>
-        <View style={{flexDirection:'row',marginTop:-20,marginLeft:-120}}>
-           <Ionicons name="ios-globe"  size={35}/>
-           <Text style={{fontWeight:'bold',fontSize:20,marginTop:8,marginLeft:6}}>Statistics</Text>
+        <View style={{flexDirection:'row',marginTop:-20,marginLeft:-90}}>
+           <Ionicons name="ios-stats"  size={28}/>
+           <Text style={{fontWeight:'bold',fontSize:20,marginTop:4,marginLeft:6}}>Statistics</Text>
+           <Text style={{marginLeft:60,fontWeight:'bold',fontSize:20,marginTop:4}}>Ghana
+           </Text>
           </View>
 
-          <View style={{flexDirection:'row'}}>
+          <View style={{flexDirection:'row',marginTop:5}}>
           <View style={{borderRightWidth:1,height:120,flex:5}}>
           <Text style={{color:'blue'}}>Confirmed</Text>
               <Text style={{fontWeight:'bold',fontSize:17,marginTop:10}}>1,550</Text>

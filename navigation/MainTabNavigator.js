@@ -5,10 +5,8 @@ import { createBottomTabNavigator } from 'react-navigation-tabs';
 
 import TabBarIcon from '../components/TabBarIcon';
 import HomeScreen from '../screens/HomeScreen';
-import DocumentScreen from '../screens/DocumentScreen';
-import ProfileScreen from '../screens/ProfileScreen';
 import CloudScreen from '../screens/CloudScreen';
-import ApplicationScreen from '../screens/ApplicationScreen';
+import ProfileScreen from '../screens/ProfileScreen';
 
 const config = Platform.select({
   web: { headerMode: 'screen' },
@@ -23,7 +21,7 @@ const HomeStack = createStackNavigator(
 );
 
 HomeStack.navigationOptions = {
-  tabBarLabel: 'Recent',
+  tabBarLabel: 'Home',
   tabBarIcon: ({ focused }) => (
     <TabBarIcon
       focused={focused}
@@ -38,56 +36,19 @@ HomeStack.path = '';
 
 const DocumentStack = createStackNavigator(
   {
-    Links: DocumentScreen,
+    Links: CloudScreen,
   },
   config
 );
 
 DocumentStack.navigationOptions = {
-  tabBarLabel: 'Documents',
+  tabBarLabel: 'Settings',
   tabBarIcon: ({ focused }) => (
-    <TabBarIcon focused={focused} name="ios-book" />
+    <TabBarIcon focused={focused} name="ios-settings" />
   ),
 };
 
 DocumentStack.path = '';
-
-const ApplicationStack = createStackNavigator(
-  {
-    Settings: ApplicationScreen,
-  },
-  config
-);
-
-ApplicationStack.navigationOptions = {
-  tabBarLabel: 'Application',
-  tabBarIcon: ({ focused }) => (
-    <TabBarIcon focused={focused} name="ios-apps" />
-  ),
-};
-
-ApplicationStack.path = '';
-
-
-
-
-const CloudStack = createStackNavigator(
-  {
-    Settings: CloudScreen,
-  },
-  config
-);
-
-CloudStack.navigationOptions = {
-  tabBarLabel: 'Cloud',
-  tabBarIcon: ({ focused }) => (
-    <TabBarIcon focused={focused} name="ios-tablet-landscape"/>
-  ),
-};
-
-CloudStack.path = '';
-
-
 
 
 const ProfileStack = createStackNavigator(
@@ -98,9 +59,9 @@ const ProfileStack = createStackNavigator(
 );
 
 ProfileStack.navigationOptions = {
-  tabBarLabel: 'Me',
+  tabBarLabel: 'Report',
   tabBarIcon: ({ focused }) => (
-    <TabBarIcon focused={focused} name="ios-person"/>
+    <TabBarIcon focused={focused} name="ios-send"/>
   ),
 };
 
@@ -109,8 +70,6 @@ ProfileStack.path = '';
 const tabNavigator = createBottomTabNavigator({
   HomeStack,
   DocumentStack,
-  ApplicationStack,
-  CloudStack,
   ProfileStack
 });
 

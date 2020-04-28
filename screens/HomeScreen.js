@@ -7,6 +7,7 @@ import {
   StyleSheet,
   Text,
   TouchableOpacity,
+  
   View,
 } from 'react-native';
 import {Ionicons} from  '@expo/vector-icons'
@@ -129,6 +130,22 @@ export default function HomeScreen() {
 
           </View>
 
+          </View>
+
+          <View >
+
+          <View style={{flex:8}}>
+          <Image  source={require('../assets/images/covid.jpg')}  style={{height:200,width:'94%',marginLeft:10,borderRadius:4,marginTop:20}}/>
+          </View>
+          <View  style={{marginTop:-100,marginLeft:29}}>
+          
+            <Text style={{fontWeight:'bold',fontSize:20}}>Prevention</Text>
+            <Text>1.Wash your hands regularly</Text>
+            <Text>2.Wear nose mask when going</Text>
+            <Text>3.Praticing social distancing</Text>
+          
+          </View>
+        
           </View>
 
     
